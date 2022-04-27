@@ -1,5 +1,6 @@
 package com.cornellappdev.firebasedemo1
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
@@ -38,6 +39,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.fab.setOnClickListener {
             signInLauncher.launch(signInIntent)
+        }
+
+        binding.button.setOnClickListener {
+            startActivity(Intent(this, SecondaryActivity::class.java))
         }
     }
 
